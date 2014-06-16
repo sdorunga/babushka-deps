@@ -12,6 +12,7 @@ dep 'apps' do
   requires 'dashlane.cask'
   requires 'origin.cask'
   requires 'slate.cask'
+  requires 'flux.cask'
 end
 
 dep 'brew-cask', :template => 'managed' do
@@ -55,6 +56,9 @@ dep 'sequel-pro.cask', :for => :osx do
 end
 dep 'robomongo.cask', :for => :osx do
   meet { `brew cask install robomongo` }
+end
+dep 'flux.cask', :for => :osx do
+    meet { `brew cask install flux` }
 end
 dep 'google-chrome.cask', :for => :osx do
   meet { `brew cask install google-chrome` }
