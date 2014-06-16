@@ -11,6 +11,7 @@ dep 'apps' do
   requires 'dash.cask'
   requires 'dashlane.cask'
   requires 'origin.cask'
+  requires 'slate.cask'
 end
 
 dep 'brew-cask', :template => 'managed' do
@@ -69,6 +70,9 @@ dep 'dash.cask', :for => :osx do
 end
 dep 'origin.cask', :for => :osx do
   meet { `brew cask install origin` }
+end
+dep 'slate.cask', :for => :osx do
+  meet { `brew cask install slate` }
 end
 dep 'vlc.cask', :for => :osx do
   meet { `brew cask install vlc` }
